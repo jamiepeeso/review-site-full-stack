@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+<title>Cheap Food</title>
+
+<link href="../static/css/style.css" th:href="@{/css/style.css}"
+	rel="stylesheet" />
+
+</head>
+
+<body>
+
+	<div class="grid">
+
+		<header>
+
+			<h1>Best of Columbus: Cheap Food</h1>
+
+			<h2>Take a look below for ways to fill your belly without
+				emptying your coffers.</h2>
+
+		</header>
+
+		<section class="reviews">
+
+			<div class="individualreview" th:each="review: ${modelReviews}">
+
+				<a th:href="@{'/review?id=' + ${review.id}}"><p id="dish"
+						th:text="${review.dish}" /></a>
+
+
+				<img id="image" th:src="${review.imageUrl}" />
+
+
+
+			</div>
+
+
+		</section>
+
+	</div>
+
+</body>
+
+</html>
