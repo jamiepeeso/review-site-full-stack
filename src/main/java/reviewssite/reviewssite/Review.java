@@ -1,50 +1,56 @@
 package reviewssite.reviewssite;
 
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Entity
+@Table(name = "REVIEW")
 public class Review {
 
 	private long id;
-	private String dish;
+	private String hero;
+	private String alias;
 	private String imageUrl;
-	private String cuisine;
+	private String brand;
 	private String review;
-	private String restaurant;
-	private int rating;
+	private String power;
 
-	public Review(long id, String dish, String imageUrl, String cuisine, String review, String restaurant, int rating) {
+	public Review(long id, String hero, String alias, String imageUrl, String brand, String review, String power) {
 		this.id = id;
-		this.dish = dish;
+		this.hero = hero;
+		this.alias = alias;
 		this.imageUrl = imageUrl;
-		this.cuisine = cuisine;
+		this.brand = brand;
 		this.review = review;
-		this.restaurant = restaurant;
-		this.rating = rating;
+		this.power = power;
 	}
 
 	public long getId() {
 		return id;
 	}
 
-	public String getDish() {
-		return dish;
+	public String getHero() {
+		return hero;
+	}
+
+	public String getAlias() {
+		return alias;
 	}
 
 	public String getImageUrl() {
 		return imageUrl;
 	}
 
-	public String getCuisine() {
-		return cuisine;
+	public String getBrand() {
+		return brand;
 	}
 
 	public String getReview() {
 		return review;
 	}
 
-	public String getRestaurant() {
-		return restaurant;
+	public String getPower() {
+		return power;
 	}
 
-	public int getRating() {
-		return rating;
-	}
 }
