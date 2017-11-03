@@ -24,5 +24,11 @@ public class ReviewsController {
 		model.addAttribute("modelReviews", reviews.findAll());
 		return "reviews-template";
 	}
+	
+	@RequestMapping("/categories")
+	public String findCategory(@RequestParam("id") long id, Model model) {
+		model.addAttribute("modelReview", reviews.findOne(id));
+		return "categories-template";
+	}
 
 }

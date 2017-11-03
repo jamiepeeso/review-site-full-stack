@@ -16,28 +16,23 @@
 	<div class="grid">
 		<header>
 
-			<h1 id="restaurant" th:text="${modelReview.restaurant}" />
+			<h1 id="hero" th:text="${modelReview.hero}" />
 
 		</header>
 		<section class="EachReview">
 
 			<h2>
-				<p id="cuisine" th:text="${modelReview.cuisine}" />
+				<p id="cuisine" th:text="${modelReview.alias}" />
 			</h2>
 
 			<h2>
-				<p id="dish" th:text="${modelReview.dish}" />
+				<p id="power" th:text="${modelReview.power}" />
 			</h2>
 
 			<img id="image" th:src="${modelReview.imageUrl}" />
 
 			<p id="review" th:text="${modelReview.review}" />
 
-			<h2 id="rating">
-				<p>
-					Rating: <span th:text="${modelReview.rating}" />
-				</p>
-			</h2>
 
 		</section>
 	</div>
