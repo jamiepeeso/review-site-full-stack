@@ -14,20 +14,20 @@ public class ReviewsController {
 	private ReviewRepository reviews;
 
 	@RequestMapping("/review")
-	public String findOne(@RequestParam("id") long id, Model model) {
+	public String fetchReview(@RequestParam("id") long id, Model model) {
 		model.addAttribute("modelReview", reviews.findOne(id));
 		return "review-template";
 	}
 
 	@RequestMapping("/allreviews")
 	public String showAll(Model model) {
-		model.addAttribute("modelReviews", reviews.findAll());
+		model.addAttribute("modelReviews", reviews.findAll(category);
 		return "reviews-template";
 	}
-	
+
 	@RequestMapping("/categories")
 	public String findCategory(@RequestParam("id") long id, Model model) {
-		model.addAttribute("modelReview", reviews.findOne(id));
+		model.addAttribute("modelCategories", .fetchReview(id));
 		return "categories-template";
 	}
 

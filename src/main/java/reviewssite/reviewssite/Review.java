@@ -15,6 +15,9 @@ import javax.persistence.Table;
 @Table(name = "REVIEW")
 public class Review {
 
+	
+	//Variables
+	
 	@Id
 	private long id;
 
@@ -28,6 +31,8 @@ public class Review {
 	@ManyToOne
 	private Category category;
 
+	// Review Constructor
+
 	public Review(long id, String hero, String alias, String imageUrl, String review, String power) {
 		this.id = id;
 		this.hero = hero;
@@ -36,6 +41,12 @@ public class Review {
 		this.review = review;
 		this.power = power;
 	}
+
+	// making JPA happy
+	public Review() {
+
+	}
+	// Getters
 
 	public long getId() {
 		return id;
@@ -59,12 +70,6 @@ public class Review {
 
 	public String getPower() {
 		return power;
-	}
-
-	@Override
-	public String toString() {
-		return "Review [id=" + id + ", hero=" + hero + ", alias=" + alias + ", imageUrl=" + imageUrl + ", review="
-				+ review + ", power=" + power + "]";
 	}
 
 }

@@ -15,6 +15,9 @@ import javax.persistence.Table;
 @Entity
 public class Category {
 
+	
+	// Variables
+	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long id;
@@ -22,19 +25,20 @@ public class Category {
 	private String categoryImage;
 
 	@OneToMany(mappedBy = "category")
+	private Collection<Review> reviews;
 
-	private Collection<Review> heroCollective;
+	// used for JPA
 
 	public Category() {
 
 	}
 
-	public Category(long id, String categoryName, String categoryImage, Collection<Review> heroCollective) {
-		this.id = id;
+	public Category(String categoryName, String categoryImage) {
 		this.categoryName = categoryName;
 		this.categoryImage = categoryImage;
-		this.heroCollective = heroCollective;
 	}
+
+	// Getters
 
 	public long getId() {
 		return id;
@@ -49,7 +53,7 @@ public class Category {
 	}
 
 	public Collection<Review> getHeroCollective() {
-		return heroCollective;
+		return reviews;
 	}
 
 }
