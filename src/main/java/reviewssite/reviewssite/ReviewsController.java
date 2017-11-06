@@ -25,8 +25,8 @@ public class ReviewsController {
 	}
 
 	@RequestMapping("/allreviews")
-	public String showAll(Model model) {
-		model.addAttribute("modelReviews", reviewRepos.findAll());
+	public String showAll(@RequestParam("id") long id, Model model) {
+		model.addAttribute("modelCategory", categoryRepos.findOne(id));
 		return "reviews-template";
 	}
 
