@@ -20,6 +20,10 @@ public class ReviewPopulator implements CommandLineRunner {
 		// Category things
 		Category DC = new Category("DC", "imageurl");
 		Category Marvel = new Category("Marvel", "imageUrl");
+		
+		
+		categoryRepos.save(DC);
+		reviewRepos.save(Marvel);
 
 	}
 

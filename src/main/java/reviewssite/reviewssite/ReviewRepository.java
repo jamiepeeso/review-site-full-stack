@@ -7,7 +7,7 @@ import java.util.Map;
 import org.springframework.stereotype.Component;
 
 @Component
-public class ReviewRepository {
+public class ReviewRepository{
 
 	Map<Long, Review> reviews = new HashMap<Long, Review>();
 
