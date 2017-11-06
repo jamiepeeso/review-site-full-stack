@@ -11,23 +11,34 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class ReviewsController {
 
 	@Resource
-	private ReviewRepository reviews;
+	private ReviewRepository reviewRepos;
+
+	@Resource
+	private CategoryReposirty categoryRepos;
+
+	// LET'S CHANGE RETURNS TO ACTUAL NAMES NOT TEMPLATES
 
 	@RequestMapping("/review")
 	public String fetchReview(@RequestParam("id") long id, Model model) {
-		model.addAttribute("modelReview", reviews.findOne(id));
+		model.addAttribute("modelReview", reviewRepos.findOne(id));
 		return "review-template";
 	}
 
 	@RequestMapping("/allreviews")
 	public String showAll(Model model) {
-		model.addAttribute("modelReviews", reviews.findAll(category);
+		model.addAttribute("modelReviews", reviewRepos.findAll());
 		return "reviews-template";
+	}
+
+	@RequestMapping("/category")
+	public String fetchCategory(@RequestParam("id") long id, Model model) {
+		model.addAttribute("modelReview", categoryRepos.findOne(id));
+		return "category-template";
 	}
 
 	@RequestMapping("/categories")
 	public String findCategory(@RequestParam("id") long id, Model model) {
-		model.addAttribute("modelCategories", .fetchReview(id));
+		model.addAttribute("modelCategories", categoryRepos.findAll());
 		return "categories-template";
 	}
 

@@ -1,23 +1,16 @@
 package reviewssite.reviewssite;
 
-import java.util.Collection;
-
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.Lob;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
 @Entity
 @Table(name = "REVIEW")
 public class Review {
 
-	
-	//Variables
-	
+	// Variables
+
 	@Id
 	private long id;
 
