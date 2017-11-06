@@ -1,6 +1,5 @@
 package reviewssite.reviewssite;
 
-import java.util.Collection;
 import java.util.Set;
 
 import javax.persistence.Entity;
