@@ -1,11 +1,10 @@
 package reviewssite.reviewssite;
 
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.Map;
+import org.springframework.data.repository.CrudRepository;
 
-import org.springframework.stereotype.Component;
+public interface ReviewRepository extends CrudRepository<Review, Long> {
 
+<<<<<<< HEAD
 @Component
 public class ReviewRepository{
 
@@ -46,4 +45,6 @@ public class ReviewRepository{
 		reviews.put(6L, drStrange);
 
 	}
+=======
+>>>>>>> 892572fbe777cedf42ebb594e82ff24b781ece59
 }

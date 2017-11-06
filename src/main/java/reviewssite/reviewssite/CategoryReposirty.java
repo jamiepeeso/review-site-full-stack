@@ -1,5 +1,7 @@
 package reviewssite.reviewssite;
 
-public class CategoryReposirty {
+import org.springframework.data.repository.CrudRepository;
+
+public interface CategoryReposirty extends CrudRepository<Category, Long> {
 
 }
