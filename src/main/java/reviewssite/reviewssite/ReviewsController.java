@@ -31,7 +31,7 @@ public class ReviewsController {
 	}
 
 	@RequestMapping("/categories")
-	public String findCategory(@RequestParam("id") long id, Model model) {
+	public String findCategory(Model model) {
 		model.addAttribute("modelCategories", categoryRepos.findAll());
 		return "categories-template";
 	}

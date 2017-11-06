@@ -18,10 +18,10 @@ public class ReviewPopulator implements CommandLineRunner {
 	public void run(String... args) throws Exception {
 
 		// Category things
-		Category DC = new Category("DC", "imageurl");
+		Category DC = new Category("DC", "images/dc/dc_logo_clear.png");
 		categoryRepos.save(DC);
 
-		Category Marvel = new Category("Marvel", "imageUrl");
+		Category Marvel = new Category("Marvel", "images/marvel/marvel.png");
 		categoryRepos.save(Marvel);
 
 		Review superman = new Review(1, "Superman", "Clark Kent, Kal-El", "images/hotdog.jpg", DC,
