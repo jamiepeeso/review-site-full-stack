@@ -16,8 +16,6 @@ public class ReviewsController {
 	@Resource
 	private CategoryReposirty categoryRepos;
 
-	// LET'S CHANGE RETURNS TO ACTUAL NAMES NOT TEMPLATES
-	// ALSO MAKE A POTENTIAL HOME PAGE WITH A BREIF DESCRIPTION?!?
 	@RequestMapping("/review")
 	public String fetchReview(@RequestParam("id") long id, Model model) {
 		model.addAttribute("modelReview", reviewRepos.findOne(id));

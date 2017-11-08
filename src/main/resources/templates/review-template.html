@@ -13,12 +13,14 @@
 
 <body>
 
-	<div class="grid">
+	<section class="singleHeroReview">
+
 		<header>
 
 			<h1 id="hero" th:text="${modelReview.hero}" />
 
 		</header>
+
 		<section class="EachReview">
 
 			<h2>
@@ -35,10 +37,12 @@
 
 
 		</section>
-	</div>
-	<footer>
-		<a th:href="@{'/categories'}">Home</a>
-	</footer>
+
+		<footer>
+			<a th:href="@{'/categories'}">Home</a>
+		</footer>
+
+	</section>
 
 </body>
 
