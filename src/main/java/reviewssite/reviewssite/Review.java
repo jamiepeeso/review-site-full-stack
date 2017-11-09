@@ -1,9 +1,14 @@
 package reviewssite.reviewssite;
 
+import java.util.Arrays;
+import java.util.HashSet;
+import java.util.Set;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.Lob;
+import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
@@ -26,14 +31,17 @@ public class Review {
 	@ManyToOne
 	private Category category;
 
-	// Review Constructor
+	@ManyToMany
+	private Set<Tag> allTags;
 
-	public Review(String hero, String alias, String imageUrl, Category category, String review) {
+	// Review Constructor
+	public Review(String hero, String alias, String imageUrl, Category category, String review, Tag... allTags) {
 		this.hero = hero;
 		this.alias = alias;
 		this.imageUrl = imageUrl;
 		this.category = category;
 		this.review = review;
+		this.allTags = new HashSet<>(Arrays.asList(allTags));
 	}
 
 	// making JPA happy
@@ -65,4 +73,9 @@ public class Review {
 	public Category getCategory() {
 		return category;
 	}
+
+	public Set<Tag> getAllTags() {
+		return allTags;
+	}
+
 }
