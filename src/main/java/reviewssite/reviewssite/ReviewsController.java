@@ -14,7 +14,7 @@ public class ReviewsController {
 	private ReviewRepository reviewRepos;
 
 	@Resource
-	private CategoryReposirty categoryRepos;
+	private CategoryRepository categoryRepos;
 
 	@RequestMapping("/review")
 	public String fetchReview(@RequestParam("id") long id, Model model) {
