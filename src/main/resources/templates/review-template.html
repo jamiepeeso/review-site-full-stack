@@ -34,6 +34,13 @@
 			<p id="tags" th:each="tags: ${modelReview.allTags}"
 				th:text="${tags.tag}" />
 
+			<form method="POST">
+
+				<label>Create New Tag:<input type="text" name="name" /></label>
+				<button th:formaction="@{/tags/create}">Submit</button>
+
+			</form>
+
 		</section>
 
 		<footer>

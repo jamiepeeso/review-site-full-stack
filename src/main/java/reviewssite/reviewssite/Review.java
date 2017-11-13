@@ -78,4 +78,11 @@ public class Review {
 		return allTags;
 	}
 
+	public void removeTag(Tag tag) {
+		allTags.remove(tag);
+	}
+
+	public void addTag(Tag tag) {
+		allTags.add(tag);
+	}
 }
