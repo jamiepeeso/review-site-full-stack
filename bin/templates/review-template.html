@@ -31,6 +31,8 @@
 
 			<p id="review" th:text="${modelReview.review}" />
 
+			<p id="tags" th:each="tags: ${modelReview.allTags}"
+				th:text="${tags.tag}" />
 
 		</section>
 

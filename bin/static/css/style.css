@@ -10,12 +10,28 @@ body {
 }
 
 .singleHeroReview {
-	background: #ADD8E6;
 	text-align: center;
+}
+
+.singleHeroReview #alias {
+	background: #ADD8E6;
+	max-width: 50%;
+	margin: auto;
 }
 
 .singleHeroReview #image {
 	max-width: 50%;
+}
+
+.singleHeroReview #review {
+	background: #ADD8E6;
+}
+
+.singleHeroReview #tags {
+	background: #ADD8E6;
+	max-width: 50%;
+	margin: auto;
+	display: inline;
 }
 
 .category-container {
@@ -66,11 +82,11 @@ a:link {
 }
 
 a:visited {
-	color: yellow;
+	color: white;
 }
 
 a:hover {
-	color: white;
+	color: yellow;
 }
 
 a:active {

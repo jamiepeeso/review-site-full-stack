@@ -70,7 +70,7 @@ public class ReviewPopulator implements CommandLineRunner {
 				"Daredevil is a hero from Marvel who was blinded in an accident which also gave him a type of radar-sense that enhanced all his other senses more than a normal human being. By night he is a costumed vigilante, by day he is Matthew Michael Murdock a lawyer fighting for the good of his neighborhood Hell’s Kitchen.",
 				orphan, mask, gadgets, human);
 		reviewRepos.save(daredevil);
-		Review starLord = new Review("Star Lord", "Alias: Peter Jason Quill", "images/marvel/star_lord_gun_up.jpg",
+		Review starLord = new Review("Star Lord", "Alias: Peter Jason Quill", "images/marvel/star_lord_gun_pointed.jpg",
 				marvel,
 				"Star Lord is a superhero who is the leader of the Guardians of the Galaxy. Created by Steve Englehart and Steve Gan, first appearing in 1976. Peter Quill is the son of a human mother and alien father, Quill assumes the mantle of Star-Lord, an interplanetary policeman… sort of.",
 				human, alien, gadgets);
